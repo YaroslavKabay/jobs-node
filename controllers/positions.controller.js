@@ -1,102 +1,58 @@
 const { statusCodes } = require('../constants');
-const fileService = require("../services/positions.service");
+const positionsService = require("../services/positions.service");
 
 module.exports = {
 
     getAllPositions: async (req, res, next) => {
         try {
-            const users = await fileService.getAllPositions();
+            const users = await positionsService.getAllPositions();
             res.json(users);
         } catch (e) {
             next(e);
         }
     },
-    // createPosition: async (req, res) => {
-    //     try {
-    //         const position = await fileService.insertPosition(req.body);
-    //
-    //         res.status(201).json(position);
-    //
-    //     } catch (e) {
-    //
-    //     }
-    // },
     createPosition: async (req, res, next) => {
         try{
-            const user = await fileService.createPosition(req.body);
+            const user = await positionsService.createPosition(req.body);
             res.status(statusCodes.CREATE).json(user);
 
         } catch (e) {
             next(e);
         }
     },
+    getPositionByID: async (req, res) => {
+        try {
+            const { position } = req;
 
-    // getUserByID: async (req, res) => {
-    //     try {
-    //         const {userId} = req.params;
-    //
-    //         if (Number.isNaN(+userId) || +userId < 0) {
-    //             res.status(400).json('Wrong user id');
-    //             return;
-    //         }
-    //
-    //         const user = await fileService.getOneUser(+userId);
-    //         if (!user) {
-    //             res.status(400).json('User not found');
-    //             return;
-    //         }
-    //
-    //         res.json(user);
-    //
-    //     } catch (e) {
-    //
-    //     }
-    // },
-    //
-    // deleteUserById: async (req, res) => {
-    //     try {
-    //         const {userId} = req.params;
-    //
-    //         if (Number.isNaN(+userId) || +userId < 0) {
-    //             res.status(400).json('Wrong user id');
-    //             return;
-    //         }
-    //
-    //         const user = await fileService.deleteOneUser(+userId);
-    //
-    //         if (!user) {
-    //             res.status(404).json('User not found');
-    //             return;
-    //         }
-    //
-    //         res.sendStatus(204);
-    //
-    //     } catch (e) {
-    //
-    //     }
-    // },
-    //
-    // updateUserByID: async (req, res) => {
-    //     try {
-    //         const {userId} = req.params;
-    //
-    //         if (Number.isNaN(+userId) || +userId < 0) {
-    //             res.status(400).json('Wrong user id');
-    //             return;
-    //         }
-    //
-    //         const user = await fileService.updateUser(+userId, req.body);
-    //
-    //         if (!user) {
-    //             res.status(404).json('User not found');
-    //             return;
-    //         }
-    //
-    //         res.status(201).json(user);
-    //
-    //     } catch (e) {
-    //
-    //     }
-    //
-    // }
+            res.json(position);
+
+        } catch (e) {
+
+        }
+    },
+    deletePositionById: async (req, res, next) => {
+        try{
+
+            const { positionId } = req.params;
+
+            await positionsService.deletePositionById(positionId);
+
+            res.sendStatus(statusCodes.NO_CONTENT);
+
+        } catch (e) {
+            next(e);
+        }
+    },
+
+    updatePositionByID: async (req, res, next) => {
+        try {
+            const { positionId } = req.params;
+
+            const position = await positionsService.updatePositionByID(positionId, req.body);
+
+            res.json(position);
+        } catch (e) {
+            next(e);
+        }
+    },
 }

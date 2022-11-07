@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e406254-8605-4e83-8337-fa853275ef81" name="Changes" comment="positions try catch + applicants start">
-      <change afterPath="$PROJECT_DIR$/dataBase/Position.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataBase/index.js" afterDir="false" />
+    <list default="true" id="7e406254-8605-4e83-8337-fa853275ef81" name="Changes" comment="mongoose">
+      <change afterPath="$PROJECT_DIR$/middlewares/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middlewares/position.middleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/configs.js" beforeDir="false" afterPath="$PROJECT_DIR$/configs/configs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/positions.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/positions.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/applicants.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/applicants.route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/positions.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/positions.route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/positions.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/positions.service.js" afterDir="false" />
     </list>
@@ -59,7 +56,9 @@
       <updated>1667822401642</updated>
       <workItem from="1667822407024" duration="11059000" />
       <workItem from="1667848770346" duration="312000" />
-      <workItem from="1667849287686" duration="2958000" />
+      <workItem from="1667849287686" duration="3013000" />
+      <workItem from="1667857570595" duration="2611000" />
+      <workItem from="1667860201181" duration="2175000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1667822868998</created>
@@ -89,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667834460632</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="mongoose">
+      <created>1667853977282</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667853977282</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +116,7 @@
     <MESSAGE value="start" />
     <MESSAGE value="positions start" />
     <MESSAGE value="positions try catch + applicants start" />
-    <option name="LAST_COMMIT_MESSAGE" value="positions try catch + applicants start" />
+    <MESSAGE value="mongoose" />
+    <option name="LAST_COMMIT_MESSAGE" value="mongoose" />
   </component>
 </project>
