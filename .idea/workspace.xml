@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e406254-8605-4e83-8337-fa853275ef81" name="Changes" comment="positions start">
-      <change afterPath="$PROJECT_DIR$/services/applicants.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="7e406254-8605-4e83-8337-fa853275ef81" name="Changes" comment="positions try catch + applicants start">
+      <change afterPath="$PROJECT_DIR$/dataBase/Position.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataBase/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/applicants.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/applicants.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/configs.js" beforeDir="false" afterPath="$PROJECT_DIR$/configs/configs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/positions.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/positions.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/applicants.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/applicants.route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/positions.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/positions.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/positions.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/positions.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,18 +37,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "16.15.1",
-    "javascript.nodejs.core.library.typings.version": "16.18.3",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.15.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.3&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,7 +57,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667822401642</updated>
-      <workItem from="1667822407024" duration="10649000" />
+      <workItem from="1667822407024" duration="11059000" />
+      <workItem from="1667848770346" duration="312000" />
+      <workItem from="1667849287686" duration="2958000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1667822868998</created>
@@ -78,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667829874268</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="positions try catch + applicants start">
+      <created>1667834460632</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667834460632</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +109,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start" />
     <MESSAGE value="positions start" />
-    <option name="LAST_COMMIT_MESSAGE" value="positions start" />
+    <MESSAGE value="positions try catch + applicants start" />
+    <option name="LAST_COMMIT_MESSAGE" value="positions try catch + applicants start" />
   </component>
 </project>

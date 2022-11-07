@@ -13,27 +13,27 @@ positionsRoute.post(
     // userMdlwr.checkIfUserEmailIsUniq,
     positionsController.createPosition
 );
-
-positionsRoute.get(
-    '/:userId',
-    // commonMdlwr.checkIfIdIsValid('userId'),
-    // userMdlwr.checkIfUserPresent(),
-    positionsController.getUserByID );
-
-positionsRoute.delete(
-    '/:userId',
-    // commonMdlwr.checkIfIdIsValid('userId'),
-    // authMdlwr.checkIsAccessToken,
-    // userMdlwr.checkIfUserPresent(),
-    positionsController.deleteUserById );
-
-positionsRoute.put(
-    '/:userId',
-    // commonMdlwr.checkIfIdIsValid('userId'),
-    // authMdlwr.checkIsAccessToken,
-    // userMdlwr.checkIfUserPresent(),
-    // userMdlwr.checkIfUserEmailIsUniq,
-    positionsController.updateUserByID );
+//
+// positionsRoute.get(
+//     '/:userId',
+//     // commonMdlwr.checkIfIdIsValid('userId'),
+//     // userMdlwr.checkIfUserPresent(),
+//     positionsController.getUserByID );
+//
+// positionsRoute.delete(
+//     '/:userId',
+//     // commonMdlwr.checkIfIdIsValid('userId'),
+//     // authMdlwr.checkIsAccessToken,
+//     // userMdlwr.checkIfUserPresent(),
+//     positionsController.deleteUserById );
+//
+// positionsRoute.put(
+//     '/:userId',
+//     // commonMdlwr.checkIfIdIsValid('userId'),
+//     // authMdlwr.checkIsAccessToken,
+//     // userMdlwr.checkIfUserPresent(),
+//     // userMdlwr.checkIfUserEmailIsUniq,
+//     positionsController.updateUserByID );
 
 
 module.exports = positionsRoute;

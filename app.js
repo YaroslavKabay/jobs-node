@@ -1,5 +1,6 @@
 const express = require('express');
 require('dotenv').config()
+const mongoose = require('mongoose');
 
 const {applicantsRoute,positionsRoute} = require('./routes')
 const { PORT, MONGO_URL} = require('./configs/configs')
@@ -16,7 +17,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/positions', positionsRoute);
-app.use('/applicants', applicantsRoute);
+// app.use('/applicants', applicantsRoute);
 
 app.use('*', (req, res, next)=>{
     next (new Error('Route not found'))
@@ -24,6 +25,7 @@ app.use('*', (req, res, next)=>{
 
 app.listen(PORT, () => {
     console.log('App listen', PORT)
+    mongoose.connect(MONGO_URL);
 });
 
 
