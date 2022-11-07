@@ -16,8 +16,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/positions', positionsRoute);
-// app.use('/applicants', applicantsRoute);
-
+app.use('/applicants', applicantsRoute);
 
 app.use('*', (req, res, next)=>{
     next (new Error('Route not found'))

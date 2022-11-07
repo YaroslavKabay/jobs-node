@@ -6,7 +6,7 @@ const {positionsController} = require("../controllers");
 const positionsRoute= Router();
 
 positionsRoute.get('/', positionsController.getAllPositions);
-//
+
 positionsRoute.post(
     '/',
     // userMdlwr.checkIfUserBodyIsValid,

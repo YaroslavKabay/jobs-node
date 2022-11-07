@@ -1,7 +1,7 @@
 // const { statusCodes } = require('../constants');
 const fileService = require("../services/positions.service");
 
-module.exports={
+module.exports = {
 
     getAllPositions: async (req, res, next) => {
         try {
@@ -11,67 +11,83 @@ module.exports={
             next(e);
         }
     },
-    createPosition:async (req, res) => {
+    createPosition: async (req, res) => {
+        try {
+            const position = await fileService.insertPosition(req.body);
+ 
+            res.status(201).json(position);
 
-        const position = await fileService.insertPosition(req.body);
+        } catch (e) {
 
-        res.status(201).json(position);
+        }
     },
 
-    getUserByID: async (req,res) => {
+    getUserByID: async (req, res) => {
+        try {
+            const {userId} = req.params;
 
-        const {userId} = req.params;
+            if (Number.isNaN(+userId) || +userId < 0) {
+                res.status(400).json('Wrong user id');
+                return;
+            }
 
-        if (Number.isNaN(+userId) || +userId<0) {
-            res.status(400).json('Wrong user id');
-            return;
+            const user = await fileService.getOneUser(+userId);
+            if (!user) {
+                res.status(400).json('User not found');
+                return;
+            }
+
+            res.json(user);
+
+        } catch (e) {
+
         }
-
-        const user = await fileService.getOneUser(+userId);
-        if (!user) {
-            res.status(400).json('User not found');
-            return;
-        }
-
-        res.json(user);
     },
 
     deleteUserById: async (req, res) => {
-        const { userId } = req.params;
+        try {
+            const {userId} = req.params;
 
-        if (Number.isNaN(+userId) || +userId < 0) {
-            res.status(400).json('Wrong user id');
-            return;
+            if (Number.isNaN(+userId) || +userId < 0) {
+                res.status(400).json('Wrong user id');
+                return;
+            }
+
+            const user = await fileService.deleteOneUser(+userId);
+
+            if (!user) {
+                res.status(404).json('User not found');
+                return;
+            }
+
+            res.sendStatus(204);
+
+        } catch (e) {
+
         }
-
-        const user = await fileService.deleteOneUser(+userId);
-
-        if (!user) {
-            res.status(404).json('User not found');
-            return;
-        }
-
-        res.sendStatus(204);
     },
 
     updateUserByID: async (req, res) => {
-        const { userId } = req.params;
-        // const { age, name } = req.body;
+        try {
+            const {userId} = req.params;
 
-        if (Number.isNaN(+userId) || +userId < 0) {
-            res.status(400).json('Wrong user id');
-            return;
+            if (Number.isNaN(+userId) || +userId < 0) {
+                res.status(400).json('Wrong user id');
+                return;
+            }
+
+            const user = await fileService.updateUser(+userId, req.body);
+
+            if (!user) {
+                res.status(404).json('User not found');
+                return;
+            }
+
+            res.status(201).json(user);
+
+        } catch (e) {
+
         }
-
-        const user = await fileService.updateUser(+userId, req.body);
-
-        if (!user) {
-            res.status(404).json('User not found');
-            return;
-        }
-
-
-        res.status(201).json(user);
 
     }
 }
