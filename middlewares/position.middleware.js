@@ -1,4 +1,4 @@
-// const {ApiError} = require('../errors');
+const {ApiError} = require('../errors');
 const {positionService} = require("../services");
 const {statusCodes} = require("../constants");
 
@@ -49,8 +49,7 @@ module.exports = {
             const position = await positionService.getOneById(positionId);
 
             if (!position) {
-                // return next(new ApiError('User not found', statusCodes.NOT_FOUND));
-                return;
+                return next(new ApiError('Position not found', statusCodes.NOT_FOUND));
             }
 
             req.position = position;
