@@ -9,7 +9,9 @@ positionsRoute.get('/', positionsController.getAllPositions);
 
 positionsRoute.post(
     '/',
-    // userMdlwr.checkIfUserBodyIsValid,
+    // positionMdlwr.IfLevelIsValid,
+
+    positionMdlwr.checkIsUserBodyValid,
     positionsController.createPosition );
 
 positionsRoute.get(
