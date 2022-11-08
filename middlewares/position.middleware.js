@@ -22,25 +22,7 @@ module.exports = {
     //     }
     // },
     //
-    // checkIfUserEmailIsUniq : async (req,res,next) => {
-    //
-    //     try {
-    //         const {email} = req.body;
-    //         const {userId} = req.params;
-    //
-    //         const userByEmail = await userService.getOneByParams({email});
-    //
-    //
-    //         if (userByEmail && userByEmail._id.toString() !== userId) {
-    //             return next(new ApiError('The email already exist', statusCodes.CONFLICT ))
-    //
-    //         }
-    //         next();
-    //
-    //     }catch (e) {
-    //         next(e);
-    //     }
-    // },
+
 
     checkIfPositionPresent: (from = 'params') => async function (req, res, next) {
         try {

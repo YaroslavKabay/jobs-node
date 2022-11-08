@@ -1,6 +1,6 @@
 const { Router } = require('express');
 
-const {positionMdlwr} = require("../middlewares");
+const {positionMdlwr, generalMdlwr} = require("../middlewares");
 const {positionsController} = require("../controllers");
 
 const positionsRoute= Router();
@@ -10,29 +10,25 @@ positionsRoute.get('/', positionsController.getAllPositions);
 positionsRoute.post(
     '/',
     // userMdlwr.checkIfUserBodyIsValid,
-    // userMdlwr.checkIfUserEmailIsUniq,
     positionsController.createPosition );
 
 positionsRoute.get(
     '/:positionId',
-    // commonMdlwr.checkIfIdIsValid('userId'),
+    generalMdlwr.checkIfIdIsValid('positionId'),
     positionMdlwr.checkIfPositionPresent(),
     positionsController.getPositionByID );
 
 
 positionsRoute.delete(
     '/:positionId',
-    // commonMdlwr.checkIfIdIsValid('userId'),
-    // authMdlwr.checkIsAccessToken,
+    generalMdlwr.checkIfIdIsValid('positionId'),
     positionMdlwr.checkIfPositionPresent(),
     positionsController.deletePositionById );
 
 positionsRoute.put(
     '/:positionId',
-    // commonMdlwr.checkIfIdIsValid('userId'),
-    // authMdlwr.checkIsAccessToken,
+    generalMdlwr.checkIfIdIsValid('positionId'),
     positionMdlwr.checkIfPositionPresent(),
-    // userMdlwr.checkIfUserEmailIsUniq,
     positionsController.updatePositionByID );
 
 
