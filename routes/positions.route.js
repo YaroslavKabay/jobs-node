@@ -2,6 +2,7 @@ const { Router } = require('express');
 
 const {positionMdlwr, generalMdlwr} = require("../middlewares");
 const {positionsController} = require("../controllers");
+const {newUserValidator,updateUserValidator}= require('../validators/');
 
 const positionsRoute= Router();
 
@@ -10,8 +11,7 @@ positionsRoute.get('/', positionsController.getAllPositions);
 positionsRoute.post(
     '/',
     // positionMdlwr.IfLevelIsValid,
-
-    positionMdlwr.checkIsUserBodyValid,
+    generalMdlwr.checkIfBodyIsValid(newUserValidator),
     positionsController.createPosition );
 
 positionsRoute.get(

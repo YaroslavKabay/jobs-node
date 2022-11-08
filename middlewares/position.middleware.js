@@ -19,21 +19,21 @@ module.exports = {
     //     }
     // },
 
-    checkIsUserBodyValid: async (req, res, next) => {
-        try {
-            const validate = positionValidator.newUserValidator.validate(req.body);
-
-            if (validate.error) {
-                return next(new ApiError(validate.error.message, statusCodes.BAD_REQUEST));
-            }
-
-            req.body = validate.value;
-
-            next();
-        } catch (e) {
-            next(e);
-        }
-    },
+    // checkIsUserBodyValid: async (req, res, next) => {
+    //     try {
+    //         const validate = positionValidator.newUserValidator.validate(req.body);
+    //
+    //         if (validate.error) {
+    //             return next(new ApiError(validate.error.message, statusCodes.BAD_REQUEST));
+    //         }
+    //
+    //         req.body = validate.value;
+    //
+    //         next();
+    //     } catch (e) {
+    //         next(e);
+    //     }
+    // },
 
 
     checkIfPositionPresent: (from = 'params') => async function (req, res, next) {
