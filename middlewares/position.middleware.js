@@ -1,7 +1,7 @@
 const {ApiError} = require('../errors');
 const {positionService} = require("../services");
 const {statusCodes} = require("../constants");
-const {positionValidator} = require("../validators");
+// const {positionValidator} = require("../validators");
 
 module.exports = {
     // IfLevelIsValid : async (req,res,next) => {

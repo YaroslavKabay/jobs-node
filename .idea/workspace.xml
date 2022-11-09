@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7e406254-8605-4e83-8337-fa853275ef81" name="Changes" comment="joi start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/general.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/general.middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/position.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/position.middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/positions.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/positions.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validators/position.validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/validators/position.validator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +20,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/middlewares/general.middleware.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -31,18 +32,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.15.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.3&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "16.15.1",
+    "javascript.nodejs.core.library.typings.version": "16.18.3",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,6 +60,7 @@
       <workItem from="1667901462033" duration="10068000" />
       <workItem from="1667923374866" duration="6973000" />
       <workItem from="1667936643740" duration="1602000" />
+      <workItem from="1667975209844" duration="1863000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1667822868998</created>
@@ -150,5 +152,9 @@
     <MESSAGE value="mdlwr, errors" />
     <MESSAGE value="joi start" />
     <option name="LAST_COMMIT_MESSAGE" value="joi start" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

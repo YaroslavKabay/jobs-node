@@ -1,6 +1,5 @@
 const Joi = require('joi');
 
-const { EMAIL, PASSWORD } = require('../constants');
 const { ApiError } = require('../errors');
 const { BAD_REQUEST } = require('../constants/');
 
