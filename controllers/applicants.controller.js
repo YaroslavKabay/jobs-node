@@ -13,10 +13,11 @@ module.exports = {
     },
     createApplicant: async (req, res, next) => {
         try{
-            const applicant = await applicantsService.createApplicant(req.body);
+            const applicantToAdd = await applicantsService.createApplicant(req.body);
+            const {_id} = applicantToAdd;
 
-            res.status(statusCodes.CREATE).json(applicant);
-            console.log(typeof applicant);
+            res.status(statusCodes.CREATE).json(_id);
+            // console.log(typeof applicant);
             // await emailService.sendEmail(email, emailActionEnum.WELCOME, {userName: name});
 
         } catch (e) {
@@ -39,12 +40,13 @@ module.exports = {
     updateApplicantById: async (req, res, next) => {
         try {
             const { userId } = req.params;
-            const {email} = req.body;
+            // const {email} = req.body;
 
-            const applicant = await applicantsService.updateApplicantById(userId, req.body);
-            await emailService.sendEmail(email,emailActionEnum.CURRENT_POSITION_REMOVED, {userName: email});
+            await applicantsService.updateApplicantById(userId, req.body);
+            // await emailService.sendEmail(email,emailActionEnum.CURRENT_POSITION_REMOVED, {userName: email});
 
-            res.json(applicant);
+            res.sendStatus(statusCodes.OK);
+
         } catch (e) {
             next(e);
         }

@@ -29,7 +29,7 @@ const japaneseRequiredValidator = Joi.boolean()
     .error(new ApiError('Please choose true or false', BAD_REQUEST));
 
 
-const newUserValidator= Joi.object({
+const newPositionValidator= Joi.object({
     category: categoryValidator.required(),
     level: levelValidator.required(),
     company: companyValidator.required(),
@@ -37,17 +37,16 @@ const newUserValidator= Joi.object({
     japaneseRequired: japaneseRequiredValidator.required(),
 });
 
-const updateUserValidator = Joi.object({
+const updatePositionValidator = Joi.object({
     category: categoryValidator,
     level: levelValidator,
     company: companyValidator,
     description: descriptionValidator,
     japaneseRequired: japaneseRequiredValidator,
-
 });
 
 
 module.exports = {
-    newUserValidator,
-    updateUserValidator,
+    newPositionValidator,
+    updatePositionValidator,
 };

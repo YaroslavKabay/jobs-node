@@ -6,21 +6,8 @@ module.exports = {
 
     getAllPositions: async (req, res, next) => {
         try {
-            const users = await positionsService.getAllPositions();
-            res.json(users);
-        } catch (e) {
-            next(e);
-        }
-    },
-    createPosition: async (req, res, next) => {
-        try{
-            const description = req.body;
-            const position = await positionsService.createPosition(req.body);
-
-            // await emailService.sendEmail(userEmails, emailActionEnum.NEW_POSITION_ADDED, {newPosition: description});
-
-            res.status(statusCodes.CREATE).json(position);
-
+            const positions = await positionsService.getAllPositions();
+            res.json(positions);
         } catch (e) {
             next(e);
         }
@@ -35,9 +22,23 @@ module.exports = {
 
         }
     },
-    deletePositionById: async (req, res, next) => {
+    createPosition: async (req, res, next) => {
         try{
             const description = req.body;
+            const positionToAdd = await positionsService.createPosition(req.body);
+            const {_id} = positionToAdd;
+
+            // await emailService.sendEmail(userEmails, emailActionEnum.NEW_POSITION_ADDED, {newPosition: description});
+
+            res.status(statusCodes.CREATE).json(_id);
+
+        } catch (e) {
+            next(e);
+        }
+    },
+    deletePositionById: async (req, res, next) => {
+        try{
+            // const description = req.body;
 
             const { positionId } = req.params;
 
@@ -55,9 +56,9 @@ module.exports = {
         try {
             const { positionId } = req.params;
 
-            const position = await positionsService.updatePositionByID(positionId, req.body);
+            await positionsService.updatePositionByID(positionId, req.body);
 
-            res.json(position);
+            res.sendStatus(statusCodes.OK);
         } catch (e) {
             next(e);
         }

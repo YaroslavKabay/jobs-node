@@ -13,7 +13,7 @@ const applicantLevelValidator = Joi.string().alphanum()
     .valid('junior','middle','senior')
     .error(new ApiError('Please choose junior or middle or senior', BAD_REQUEST));
 
-const applicantCategoryValidator = Joi.array().items(Joi.string()
+const applicantCategoriesValidator = Joi.array().items(Joi.string()
     .trim()
     .valid('nodeJS', 'react', 'angular', 'javaScript'))
     .error(new ApiError('Please choose react or angular or nodeJS', BAD_REQUEST));
@@ -25,14 +25,14 @@ const japaneseRequiredValidator = Joi.boolean()
 const newApplicantValidator= Joi.object({
     email: applicantEmailValidator.required(),
     level: applicantLevelValidator.required(),
-    categories: applicantCategoryValidator.required(),
+    categories: applicantCategoriesValidator.required(),
     japaneseRequired: japaneseRequiredValidator.required(),
 });
 
 const updateApplicantValidator = Joi.object({
     email: applicantEmailValidator,
     level: applicantLevelValidator,
-    categories: applicantCategoryValidator,
+    categories: applicantCategoriesValidator,
     japaneseRequired: japaneseRequiredValidator,
 });
 
