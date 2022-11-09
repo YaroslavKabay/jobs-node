@@ -29,6 +29,7 @@ positionsRoute.delete(
 
 positionsRoute.put(
     '/:positionId',
+    generalMdlwr.checkIfBodyIsValid(updateUserValidator),
     generalMdlwr.checkIfIdIsValid('positionId'),
     positionMdlwr.checkIfPositionPresent(),
     positionsController.updatePositionByID );

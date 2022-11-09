@@ -16,7 +16,7 @@ module.exports = {
             const applicant = await applicantsService.createApplicant(req.body);
 
             res.status(statusCodes.CREATE).json(applicant);
-
+            console.log(typeof applicant);
         } catch (e) {
             next(e);
         }

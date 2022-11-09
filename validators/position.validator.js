@@ -6,20 +6,27 @@ const { BAD_REQUEST } = require('../constants/');
 const categoryValidator = Joi.string().alphanum()
     .min(2)
     .max(35)
-    .trim();
+    .trim()
+    .valid("nodeJS", "react", "angular")
+    .error(new ApiError('Please choose react or angular or nodeJS', BAD_REQUEST));
+
 const levelValidator = Joi.string().alphanum()
-    .min(2)
-    .max(35)
-    .trim();
+    .trim()
+    .valid('junior','middle','senior')
+    .error(new ApiError('Please choose junior or middle or senior', BAD_REQUEST));
+
 const companyValidator = Joi.string().alphanum()
     .min(2)
     .max(35)
     .trim();
+
 const descriptionValidator = Joi.string().alphanum()
     .min(2)
     .max(35)
     .trim();
-const japaneseRequiredValidator = Joi.boolean();
+
+const japaneseRequiredValidator = Joi.boolean()
+    .error(new ApiError('Please choose true or false', BAD_REQUEST));
 
 
 const newUserValidator= Joi.object({
@@ -28,7 +35,6 @@ const newUserValidator= Joi.object({
     company: companyValidator.required(),
     description: descriptionValidator,
     japaneseRequired: japaneseRequiredValidator.required(),
-    // girls: Joi.array().items(Joi.string()).when('age', { is: 26, then: Joi.required() })
 });
 
 const updateUserValidator = Joi.object({
@@ -43,5 +49,5 @@ const updateUserValidator = Joi.object({
 
 module.exports = {
     newUserValidator,
-    // updateUserValidator,
+    updateUserValidator,
 };
