@@ -1,4 +1,9 @@
 module.exports = {
     PORT: process.env.PORT || 5000,
-    MONGO_URL: process.env.MONGO_URL || 'mongodb+srv://YaroslavKabay:YaroslavKabay@cluster0.7mmv4jz.mongodb.net/nodeEdu?retryWrites=true&w=majority'
+    MONGO_URL: process.env.MONGO_URL || 'mongodb+srv://YaroslavKabay:YaroslavKabay@cluster0.7mmv4jz.mongodb.net/nodeEdu?retryWrites=true&w=majority' ,
+
+    FRONTEND_URL: process.env.FRONTEND_URL || 'google.com',
+
+    NO_REPLY_EMAIL: process.env.NO_REPLY_EMAIL || 'example@email.com',
+    NO_REPLY_PASSWORD: process.env.NO_REPLY_PASSWORD || 'email password',
 }

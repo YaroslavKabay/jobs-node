@@ -7,7 +7,7 @@ const categoryValidator = Joi.string().alphanum()
     .min(2)
     .max(35)
     .trim()
-    .valid("nodeJS", "react", "angular")
+    .valid('nodeJS', 'react', 'angular', 'javaScript')
     .error(new ApiError('Please choose react or angular or nodeJS', BAD_REQUEST));
 
 const levelValidator = Joi.string().alphanum()

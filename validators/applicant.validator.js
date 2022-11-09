@@ -15,7 +15,7 @@ const applicantLevelValidator = Joi.string().alphanum()
 
 const applicantCategoryValidator = Joi.array().items(Joi.string()
     .trim()
-    .valid("nodeJS", "react", "angular"))
+    .valid('nodeJS', 'react', 'angular', 'javaScript'))
     .error(new ApiError('Please choose react or angular or nodeJS', BAD_REQUEST));
 
 const japaneseRequiredValidator = Joi.boolean()

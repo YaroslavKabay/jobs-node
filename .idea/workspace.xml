@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e406254-8605-4e83-8337-fa853275ef81" name="Changes" comment="joi start">
-      <change afterPath="$PROJECT_DIR$/validators/applicant.validator.js" afterDir="false" />
+    <list default="true" id="7e406254-8605-4e83-8337-fa853275ef81" name="Changes" comment="joi final">
+      <change afterPath="$PROJECT_DIR$/constants/emailAction.enum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-templates/container.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-templates/current_position_removed.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-templates/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-templates/new_position_added.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-templates/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/email.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/regex.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/constants/regex.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/configs.js" beforeDir="false" afterPath="$PROJECT_DIR$/configs/configs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/constants/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/applicants.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/applicants.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/applicants.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/applicants.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/positions.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/positions.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/positions.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/positions.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validators/applicant.validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/validators/applicant.validator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/validators/position.validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/validators/position.validator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -48,6 +58,7 @@
     "WebServerToolWindowFactoryState": "false",
     "javascript.nodejs.core.library.configured.version": "16.15.1",
     "javascript.nodejs.core.library.typings.version": "16.18.3",
+    "list.type.of.created.stylesheet": "CSS",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font"
   }
@@ -68,7 +79,7 @@
       <workItem from="1667901462033" duration="10068000" />
       <workItem from="1667923374866" duration="6973000" />
       <workItem from="1667936643740" duration="1602000" />
-      <workItem from="1667975209844" duration="8741000" />
+      <workItem from="1667975209844" duration="24914000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1667822868998</created>
@@ -140,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667977348210</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="joi final">
+      <created>1667989916835</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1667989916835</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +184,8 @@
     <MESSAGE value="applicant contr,rout,service" />
     <MESSAGE value="mdlwr, errors" />
     <MESSAGE value="joi start" />
-    <option name="LAST_COMMIT_MESSAGE" value="joi start" />
+    <MESSAGE value="joi final" />
+    <option name="LAST_COMMIT_MESSAGE" value="joi final" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

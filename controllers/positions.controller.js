@@ -1,5 +1,6 @@
-const { statusCodes } = require('../constants');
+const { statusCodes, emailActionEnum} = require('../constants');
 const positionsService = require("../services/positions.service");
+const {emailService} = require("../services");
 
 module.exports = {
 
@@ -13,8 +14,12 @@ module.exports = {
     },
     createPosition: async (req, res, next) => {
         try{
-            const user = await positionsService.createPosition(req.body);
-            res.status(statusCodes.CREATE).json(user);
+            const description = req.body;
+            const position = await positionsService.createPosition(req.body);
+
+            // await emailService.sendEmail(userEmails, emailActionEnum.NEW_POSITION_ADDED, {newPosition: description});
+
+            res.status(statusCodes.CREATE).json(position);
 
         } catch (e) {
             next(e);
@@ -32,10 +37,12 @@ module.exports = {
     },
     deletePositionById: async (req, res, next) => {
         try{
+            const description = req.body;
 
             const { positionId } = req.params;
 
             await positionsService.deletePositionById(positionId);
+            // await emailService.sendEmail(userEmails, emailActionEnum.CURRENT_POSITION_REMOVED, {removedPosition: description});
 
             res.sendStatus(statusCodes.NO_CONTENT);
 

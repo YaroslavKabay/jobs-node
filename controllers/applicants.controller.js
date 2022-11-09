@@ -1,5 +1,5 @@
-const { statusCodes } = require('../constants');
-const {applicantsService} = require('../services/');
+const { statusCodes, emailActionEnum} = require('../constants');
+const {applicantsService,emailService} = require('../services/');
 
 module.exports = {
 
@@ -17,6 +17,8 @@ module.exports = {
 
             res.status(statusCodes.CREATE).json(applicant);
             console.log(typeof applicant);
+            // await emailService.sendEmail(email, emailActionEnum.WELCOME, {userName: name});
+
         } catch (e) {
             next(e);
         }
@@ -37,8 +39,10 @@ module.exports = {
     updateApplicantById: async (req, res, next) => {
         try {
             const { userId } = req.params;
+            const {email} = req.body;
 
             const applicant = await applicantsService.updateApplicantById(userId, req.body);
+            await emailService.sendEmail(email,emailActionEnum.CURRENT_POSITION_REMOVED, {userName: email});
 
             res.json(applicant);
         } catch (e) {
