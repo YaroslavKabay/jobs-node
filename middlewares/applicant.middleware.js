@@ -1,6 +1,6 @@
 const {ApiError} = require('../errors');
-const {applicantsService} = require("../services");
-const {statusCodes} = require("../constants");
+const {applicantsService} = require('../services');
+const {statusCodes} = require('../constants');
 
 module.exports = {
 
@@ -31,7 +31,7 @@ module.exports = {
     // },
 
 
-    checkIfApplicantPresent: (from = 'params') => async function (req, res, next) {
+    checkIfApplicantPresent: (from = 'params') => async function(req, res, next) {
         try {
             const { userId } = req[from];
 
@@ -56,7 +56,7 @@ module.exports = {
             const userByEmail = await applicantsService.getOneByParams({email});
 
             if (userByEmail && userByEmail._id.toString() !== userId) {
-                return next(new ApiError('The email already exist', statusCodes.CONFLICT ))
+                return next(new ApiError('The email already exist', statusCodes.CONFLICT ));
             }
 
             next();
@@ -65,4 +65,4 @@ module.exports = {
             next(e);
         }
     },
-}
+};

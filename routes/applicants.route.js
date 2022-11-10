@@ -6,8 +6,6 @@ const {newApplicantValidator, updateApplicantValidator} = require('../validators
 
 const applicantsRoute= Router();
 
-applicantsRoute.get('/', applicantsController.getAllPositions);
-
 applicantsRoute.post(
     '/',
     generalMdlwr.checkIfBodyIsValid(newApplicantValidator),

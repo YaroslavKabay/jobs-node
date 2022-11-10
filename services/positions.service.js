@@ -2,9 +2,7 @@ const {Position} = require('../dataBase');
 
 module.exports = {
 
-    getAllPositions:  () => {
-        return Position.find();
-    },
+    getAllPositions:  () => Position.find(),
     createPosition(userObject){
         return Position.create(userObject);
     },
@@ -18,7 +16,7 @@ module.exports = {
         return Position.findOneAndUpdate({ _id: positionId }, newPositionObject, { new: true });
     },
     getAllPositionsDynamically(query){
-        return Position.find(query)
+        return Position.find(query);
     },
     // getUserEmails(body){
     //     const {category, japaneseRequired, level} = body;
@@ -34,4 +32,4 @@ module.exports = {
     //     const userEmails = emails(applicants)
     //
     // },
-}
+};

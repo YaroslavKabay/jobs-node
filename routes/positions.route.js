@@ -1,7 +1,7 @@
 const { Router } = require('express');
 
-const {positionMdlwr, generalMdlwr} = require("../middlewares");
-const {positionsController} = require("../controllers");
+const {positionMdlwr, generalMdlwr} = require('../middlewares');
+const {positionsController} = require('../controllers');
 const {updatePositionValidator,newPositionValidator}= require('../validators/position.validator');
 
 const positionsRoute= Router();

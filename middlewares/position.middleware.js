@@ -1,6 +1,6 @@
 const {ApiError} = require('../errors');
-const {positionService} = require("../services");
-const {statusCodes} = require("../constants");
+const {positionService} = require('../services');
+const {statusCodes} = require('../constants');
 // const {positionValidator} = require("../validators");
 
 module.exports = {
@@ -36,7 +36,7 @@ module.exports = {
     // },
 
 
-    checkIfPositionPresent: (from = 'params') => async function (req, res, next) {
+    checkIfPositionPresent: (from = 'params') => async function(req, res, next) {
         try {
             const { positionId } = req[from];
 
@@ -52,4 +52,4 @@ module.exports = {
             next(e);
         }
     }
-}
+};

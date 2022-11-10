@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "start": "node app.js",
+    "lint": "eslint --fix --ext .js ."
+  },
   "dependencies": {
     "dotenv": "^16.0.3",
     "email-templates": "^10.0.1",
@@ -9,6 +13,10 @@
     "pug": "^3.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "@types/nodemailer": "^6.4.6",
+    "eslint": "8.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1"
   }
 }

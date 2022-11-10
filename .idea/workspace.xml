@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e406254-8605-4e83-8337-fa853275ef81" name="Changes" comment="mail service done">
+    <list default="true" id="7e406254-8605-4e83-8337-fa853275ef81" name="Changes" comment="dynamically params">
+      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/configs.js" beforeDir="false" afterPath="$PROJECT_DIR$/configs/configs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/emailAction.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/constants/emailAction.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/constants/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/regex.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/constants/regex.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/statusCodes.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/constants/statusCodes.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/applicants.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/applicants.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/positions.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/positions.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataBase/Applicant.js" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase/Applicant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataBase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/ApiError.js" beforeDir="false" afterPath="$PROJECT_DIR$/errors/ApiError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/errors/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/mainHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/errors/mainHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/applicant.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/applicant.middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/general.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/general.middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/position.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/position.middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/applicants.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/applicants.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/positions.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/positions.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/applicants.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/applicants.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/email.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/email.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/positions.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/positions.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validators/applicant.validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/validators/applicant.validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validators/general.validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/validators/general.validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validators/position.validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/validators/position.validator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -46,10 +74,43 @@
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.15.1&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.3&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Font&quot;
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/sashko/IdeaProjects/jobs-node/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;
   }
 }</component>
+  <component name="RunManager" selected="npm.lint">
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.lint" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,7 +129,9 @@
       <workItem from="1667936643740" duration="1602000" />
       <workItem from="1667975209844" duration="32886000" />
       <workItem from="1668075798090" duration="2329000" />
-      <workItem from="1668080682116" duration="25584000" />
+      <workItem from="1668080682116" duration="27080000" />
+      <workItem from="1668113655862" duration="553000" />
+      <workItem from="1668114218207" duration="832000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1667822868998</created>
@@ -175,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668107295185</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="dynamically params">
+      <created>1668112472194</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1668112472194</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +275,8 @@
     <MESSAGE value="mailer start" />
     <MESSAGE value="controller fixes" />
     <MESSAGE value="mail service done" />
-    <option name="LAST_COMMIT_MESSAGE" value="mail service done" />
+    <MESSAGE value="dynamically params" />
+    <option name="LAST_COMMIT_MESSAGE" value="dynamically params" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
