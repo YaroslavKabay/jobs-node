@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7e406254-8605-4e83-8337-fa853275ef81" name="Changes" comment="controller fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/applicants.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/applicants.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/positions.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/positions.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-templates/current_position_removed.pug" beforeDir="false" afterPath="$PROJECT_DIR$/email-templates/current_position_removed.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-templates/new_position_added.pug" beforeDir="false" afterPath="$PROJECT_DIR$/email-templates/new_position_added.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/applicants.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/applicants.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/positions.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/positions.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,19 +41,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "16.15.1",
-    "javascript.nodejs.core.library.typings.version": "16.18.3",
-    "list.type.of.created.stylesheet": "CSS",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.15.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.3&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Font&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,7 +70,9 @@
       <workItem from="1667901462033" duration="10068000" />
       <workItem from="1667923374866" duration="6973000" />
       <workItem from="1667936643740" duration="1602000" />
-      <workItem from="1667975209844" duration="32858000" />
+      <workItem from="1667975209844" duration="32886000" />
+      <workItem from="1668075798090" duration="2329000" />
+      <workItem from="1668080682116" duration="20648000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1667822868998</created>
@@ -157,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668027466069</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="controller fixes">
+      <created>1668028693026</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1668028693027</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

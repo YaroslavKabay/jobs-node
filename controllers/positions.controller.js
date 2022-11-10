@@ -1,6 +1,6 @@
 const { statusCodes, emailActionEnum} = require('../constants');
 const positionsService = require("../services/positions.service");
-const {emailService} = require("../services");
+const {emailService, applicantsService} = require("../services");
 
 module.exports = {
 
@@ -23,12 +23,20 @@ module.exports = {
         }
     },
     createPosition: async (req, res, next) => {
-        try{
+        try {
             const description = req.body;
+
             const positionToAdd = await positionsService.createPosition(req.body);
             const {_id} = positionToAdd;
+            const userEmails = await applicantsService.getFilteredEmails(req.body)
 
-            // await emailService.sendEmail(userEmails, emailActionEnum.NEW_POSITION_ADDED, {newPosition: description});
+            userEmails.map(async userEmail =>
+                await emailService.sendEmail(
+                    userEmail,
+                    emailActionEnum.NEW_POSITION_ADDED,
+                    {newPosition: JSON.stringify(description)}
+                )
+            );
 
             res.status(statusCodes.CREATE).json(_id);
 
@@ -38,12 +46,27 @@ module.exports = {
     },
     deletePositionById: async (req, res, next) => {
         try{
-            // const description = req.body;
-
             const { positionId } = req.params;
 
-            await positionsService.deletePositionById(positionId);
-            // await emailService.sendEmail(userEmails, emailActionEnum.CURRENT_POSITION_REMOVED, {removedPosition: description});
+            const positionInfo= await positionsService.getOneById(positionId)
+
+            const userEmails = await applicantsService.getFilteredEmails(positionInfo)
+
+            const { _doc: { _id, createdAt, updatedAt, ...restPositionInfo} } = positionInfo;
+            console.log(restPositionInfo);
+
+
+            userEmails.map(async userEmail =>
+                await emailService.sendEmail(
+                    userEmail,
+                    emailActionEnum.CURRENT_POSITION_REMOVED,
+                    { newPosition:
+                            JSON.stringify(restPositionInfo)
+                    }
+                )
+            );
+
+            // await positionsService.deletePositionById(positionId);
 
             res.sendStatus(statusCodes.NO_CONTENT);
 

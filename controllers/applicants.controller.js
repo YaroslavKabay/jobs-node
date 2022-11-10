@@ -1,5 +1,6 @@
 const { statusCodes, emailActionEnum} = require('../constants');
-const {applicantsService,emailService} = require('../services/');
+const {applicantsService, emailService} = require('../services/');
+const {updateApplicantById} = require("../services/applicants.service");
 
 module.exports = {
 

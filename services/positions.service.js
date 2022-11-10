@@ -17,5 +17,18 @@ module.exports = {
     updatePositionByID(positionId, newPositionObject) {
         return Position.findOneAndUpdate({ _id: positionId }, newPositionObject, { new: true });
     },
-
+    // getUserEmails(body){
+    //     const {category, japaneseRequired, level} = body;
+    //     const filter = {categories: {$all: [category]}, level};
+    //     if (japaneseRequired) {
+    //         filter.japaneseRequired = true
+    //     }
+    //
+    //     const applicants = await applicantsService.getAllByParams(filter);
+    //
+    //     const emails = (arr) => arr.map(({ email }) => email)
+    //
+    //     const userEmails = emails(applicants)
+    //
+    // },
 }
