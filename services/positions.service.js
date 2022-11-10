@@ -17,6 +17,9 @@ module.exports = {
     updatePositionByID(positionId, newPositionObject) {
         return Position.findOneAndUpdate({ _id: positionId }, newPositionObject, { new: true });
     },
+    getAllPositionsDynamically(query){
+        return Position.find(query)
+    },
     // getUserEmails(body){
     //     const {category, japaneseRequired, level} = body;
     //     const filter = {categories: {$all: [category]}, level};

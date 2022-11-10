@@ -3,11 +3,11 @@ const positionsService = require("../services/positions.service");
 const {emailService, applicantsService} = require("../services");
 
 module.exports = {
-
     getAllPositions: async (req, res, next) => {
         try {
-            const positions = await positionsService.getAllPositions();
-            res.json(positions);
+            const getAllPositionsDynamically = await  positionsService.getAllPositionsDynamically(req.query)
+            res.json(getAllPositionsDynamically);
+
         } catch (e) {
             next(e);
         }
@@ -66,7 +66,7 @@ module.exports = {
                 )
             );
 
-            // await positionsService.deletePositionById(positionId);
+            await positionsService.deletePositionById(positionId);
 
             res.sendStatus(statusCodes.NO_CONTENT);
 
