@@ -1,0 +1,197 @@
+{
+  "info": {
+    "_postman_id": "bb8e3f92-9caa-4ed5-91fc-ae44efacc0bd",
+    "name": "jobs-node",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21724424"
+  },
+  "item": [
+    {
+      "name": "positions",
+      "item": [
+        {
+          "name": "post position",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"category\":\"react1\",\n\"level\":\"junior\",\n\"company\":\"Lalalend\",\n\"description\":\"text\",\n\"japaneseRequired\":false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{domain}}/positions",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "positions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get position by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/positions/3",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "positions",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all positions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/positions",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "positions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete position by id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/positions/4",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "positions",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update position by id",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"category\":\"react\",\n\"company\":\"11111111111Lalalend\",\n\"level\":\"junior\",\n\"description\":\"text\",\n\"japaneseRequired\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{domain}}/positions/636bfb241493e3829971cb92",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "positions",
+                "636bfb241493e3829971cb92"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "applicants",
+      "item": [
+        {
+          "name": "post applicant",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{domain}}/applicants",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "applicants"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update applicant by id",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"category\":\"angular\",\n\"level\":\"junior\",\n\"company\":\"Lalalend\",\n\"description\":\"text\",\n\"id\":1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{domain}}/applicants/1",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "applicants",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete applicant by id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/applicants/4",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "applicants",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
